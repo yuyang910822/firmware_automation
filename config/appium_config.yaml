@@ -1,0 +1,15 @@
+sv1g:
+  {
+  "server": "http://127.0.0.1:4723/wd/hub",
+  "desired_caps":
+    {
+      "deviceName": "101013XZW02WF00135",
+      "automationName": "UiAutomator2",
+      "platformName": "Android",
+      "autoAcceptAlerts": "true",
+      "noReset": "true",
+      "appPackage": "com.superhexa.launcher",
+      "appActivity": "com.superhexa.launcher.MainActivity",
+      "newCommandTimeout": 600
+    }
+  }
