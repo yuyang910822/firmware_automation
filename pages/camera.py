@@ -2,10 +2,14 @@
 import time
 
 from base.androir_base_mothod import Android_base
+from base.driver import Android_drive
 
 
 class Camera(Android_base):
     """相机模块"""
+    # 辅助驱动器，用于测试过程中对其他设备依赖
+
+    driver_two = Android_base(driver=Android_drive().android_drive)
 
     def photos(self, number):
         """
@@ -52,3 +56,4 @@ class Camera(Android_base):
 
     def click_ratio(self):
         pass
+        self.driver.find_element()

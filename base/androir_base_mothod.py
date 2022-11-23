@@ -18,19 +18,20 @@ class Android_base:
     1.定义常见定位方法
     2.定义系统常用方法
     """
-    def __init__(self, driver: webdriver.Remote,log_path):
+    def __init__(self, driver: webdriver.Remote):
         """
-
+        初始化方法
         :param driver: 操作目标驱动器
         :param log_file: 记录日志文件地址
         """
+
         self.driver = driver
         # 全局等待
         self.driver.implicitly_wait(30)
         # 获取屏幕尺寸进行滑动操作
-        self.size = driver.get_window_size()
+        self.size = self.driver.get_window_size()
         # 日志记录
-        self.log = Log(file=log_path)
+        self.log = Log(file='log_path')
         # 非全局等待
         self.wait = WebDriverWait(self.driver, 10, 1)
 
