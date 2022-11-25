@@ -10,7 +10,7 @@ from config.read_yaml import read_yaml
 class Firmware_drive(unittest.TestCase):
     """驱动会话"""
 
-
+    #ffffffffffff
     appium_config = read_yaml(appium_yaml_path)['svg1']['desired_caps']
     server = 'http://127.0.0.1:4723/wd/hub'
     desired_caps = {"deviceName": appium_config['deviceName'],
